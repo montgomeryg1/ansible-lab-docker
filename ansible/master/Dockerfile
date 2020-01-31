@@ -8,8 +8,11 @@ RUN apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y \
     ansible
 
+# customise the default role path for ansible
+RUN echo 'roles_path = /var/ans/roles' >> /etc/ansible/ansible.cfg
+
 # copy content of ansible directory from local disk to file system inside Docker image
-COPY ansible /var/ans/
+ADD ansible /var/ans/
 
 # change working directory
 WORKDIR /var/ans

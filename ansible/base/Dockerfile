@@ -1,7 +1,7 @@
 # BASE image - used as a starting point by MASTER and HOST images
-
+ARG UBUNTU_VERSION=18.04
 # I use official Ubuntu 17.10 image as a starting point
-FROM ubuntu:17.10
+FROM ubuntu:${UBUNTU_VERSION}
 
 # install required packages
 RUN apt-get update \
