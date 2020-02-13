@@ -52,8 +52,6 @@
     state: directory 
     owner: www-data 
     group: www-data
-  notify:
-    - Reload Nginx
 
 - name: Web Root Permissions
   when: nginxinstalled is success

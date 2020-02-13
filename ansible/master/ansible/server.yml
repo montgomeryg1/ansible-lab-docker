@@ -6,7 +6,6 @@
     - nginx
 
 - hosts: local
-  connection: local
   become: yes
   become_user: root
   roles:
